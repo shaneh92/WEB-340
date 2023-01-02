@@ -1,2 +1,6 @@
 # WEB-340
-A repository for WEB-340 node.js
+<h1>WEB 340 Node.js</h1>
+<h2>Contributors</h2>
+<ul>
+    <li>Professor Krasso</li>
+    <li>Shane Hingtgen</li>
