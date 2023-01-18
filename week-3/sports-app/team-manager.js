@@ -20,8 +20,8 @@ let teams = [
     new Team('University of Iowa', 'Herky', 116),
     new Team('Mississippi State University', 'Bully the Bulldog', 98),
     new Team('University of Michigan', 'Biff the Wolverine', 125),
-    new Team('Texas Christian School', 'Super Frog', 109),
-    new Team('University of Alabama', 'Big al', 115),
+    new Team('Texas Christian University', 'Super Frog', 109),
+    new Team('University of Alabama', 'Big Al', 115),
 ]
 
 //function for returning the entire team array of objects
@@ -40,7 +40,7 @@ function getTeam(name) {
 
 //displays the single team
 function displayTeam(Team) {
-    return ('Name: ' + Team.name + '\nMascot: ' + Team.mascot + '\nPlayer Count: ' + Team.playerCount + '\n');
+    return ('   Name: ' + Team.name + '\n   Mascot: ' + Team.mascot + '\n   Player Count: ' + Team.playerCount + '\n');
 };
 
 module.exports = { getTeams, getTeam, displayTeam};//exporting functions

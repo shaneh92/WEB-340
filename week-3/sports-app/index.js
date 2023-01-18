@@ -19,7 +19,7 @@ const TeamManager = require('./team-manager')//importing all the functions
 let teams = TeamManager.getTeams();//getting all the teams
 
 //allows for all teams to be displayed
-console.log(`-- DISPLAYING TEAMS --`);
+console.log(`   -- DISPLAYING TEAMS --`);
 for (let team of teams) {
     console.log(TeamManager.displayTeam(team));
 }
@@ -30,9 +30,9 @@ const miss = TeamManager.getTeam('Mississippi State University');
 
 
 //Both teams logged
-console.log(`-- DISPLAYING A SINGLE TEAM --`);
+console.log(`   -- DISPLAYING A SINGLE TEAM --`);
 console.log(TeamManager.displayTeam(iowa));
 
 
-console.log(`-- DISPLAYING A SINGLE TEAM --`);
+console.log(`   -- DISPLAYING A SINGLE TEAM --`);
 console.log(TeamManager.displayTeam(miss));
