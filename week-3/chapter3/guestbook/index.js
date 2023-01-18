@@ -25,7 +25,7 @@ app.get("/", function(request, response) {
   response.render("index");
 });
 
-app.get("/new-entry", function(req, res) {
+app.get("/new-entry", function(request, response) {
   response.render("new-entry");
 });
 
@@ -36,7 +36,7 @@ app.post("/new-entry", function(request, response) {
   }
   entries.push({
     title: request.body.title,
-    body: "/new-entry",
+    body: request.body.body,
     published: new Date()
   });
   response.redirect("/");

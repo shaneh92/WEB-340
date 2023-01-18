@@ -29,16 +29,12 @@ function getTeams() {
     return teams;
 };
 
-//.find() builtin, allows to get a single team based on the name
+//.find() function, allows to get a single team based on the name
 function getTeam(name) {
-    for (let team of teams) {
-        if(team.name === name) {
-            return team;
-        }
-    }
+    return teams.find(Team => Team.name === name);
 };
 
-//displays the single team
+//displays the single team and multiple teams output
 function displayTeam(Team) {
     return ('   Name: ' + Team.name + '\n   Mascot: ' + Team.mascot + '\n   Player Count: ' + Team.playerCount + '\n');
 };
