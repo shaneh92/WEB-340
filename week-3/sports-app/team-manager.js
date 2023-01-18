@@ -1,31 +1,46 @@
+/*
+==============================================================================
+; Title: team-manager.js
+; Author: Professor Krasso
+; Modified by: Shane Hingtgen
+; Bellevue University
+; Date: 01/17/23
+; Description: Practice using CLI to display a message of teams
+; Work Cited: 
+    Web 330 HTML, CSS, and JavaScript Requirements
+    Web340_Assign3
+    Web340_Week3 PowerPoint
+    Course GitHub https://github.com/buwebdev/web-340/tree/master/week-3
+=================================================================================================================
+*/
 'use-strict'
-const Team = require('./team.js');
-let team = [
-
-    new team(`University of Iowa`, 'Herky', 116),
-    new team(`University of Mississippi State`, 'Bully the Bulldog', 98),
-    new team(`University of Michigan`, 'Biff the Wolverine', 125),
-    new team(`Texas Christian School`, 'Super Frog', 109),
-    new team(`University of Alabama`, 'Big al', 115),
+const Team = require('./team.js'); //importing the class
+let teams = [
+    //objects of the array 
+    new Team('University of Iowa', 'Herky', 116),
+    new Team('Mississippi State University', 'Bully the Bulldog', 98),
+    new Team('University of Michigan', 'Biff the Wolverine', 125),
+    new Team('Texas Christian School', 'Super Frog', 109),
+    new Team('University of Alabama', 'Big al', 115),
 ]
 
+//function for returning the entire team array of objects
 function getTeams() {
-    return team;
+    return teams;
 };
 
-module.export = getTeams;
-
+//.find() builtin, allows to get a single team based on the name
 function getTeam(name) {
-    return team.find(name);
-
+    for (let team of teams) {
+        if(team.name === name) {
+            return team;
+        }
+    }
 };
 
-module.export = getTeam;
-
-function displayTeam(team) {
-    return (`Name: ${team.name} \n
-    Mascot: ${team.mascot} \n
-    Player Count: ${team.playerCount}`)
+//displays the single team
+function displayTeam(Team) {
+    return ('Name: ' + Team.name + '\nMascot: ' + Team.mascot + '\nPlayer Count: ' + Team.playerCount + '\n');
 };
 
-module.export = displayTeam;
+module.exports = { getTeams, getTeam, displayTeam};//exporting functions
