@@ -1,0 +1,222 @@
+/*
+==============================================================================
+; Title: theme.css
+; Author: Professor Krasso
+; Modified by: Shane Hingtgen
+; Bellevue University
+; Date: 01/02/23
+; Description: This is the theme.css file required by the Web 330 HTML, CSS, and JavaScript Requirements document.
+; Work Cited: 
+    Web 330 HTML, CSS, and JavaScript Requirements
+    https://www.w3schools.com/css/css3_variables.asp
+=================================================================================================================
+*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 3% auto 0;
+  display: inline-grid;
+  grid-template-columns: auto;
+  width: 600px;
+  background-color: var(--card-background-color);
+}
+
+.card-title {
+  text-align: center;
+  color: var(--card-title-color);
+  font-weight: 400;
+  font-size: 2em;
+}
+
+.card-content {
+  padding: 2px 16px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 15px 32px;
+  color: black;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: var(--btn-background-color);
+  color: var(--btn-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-hover-background-color);
+  color: var(--btn-hover-color);
+}
+
+.input {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.drop-down-menu {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+/*The above content is required from the Web 330 HTML, CSS, and JavaScript requirements document on CSS styles in theme.css section.*/
+
+/*Styles for the dark and light themes .classList*/
+body.light-theme {
+  --text-color: #000;
+  --background-color: #fff;
+  --anchor-color: #4f3674;
+  --h1-background-color: #3c275a;
+  --h1-border-color: #d6a800;
+  --heading-background-color: #3c275a;
+  --heading-color: #fff;
+  --heading-border-color: #d6a800;
+  --anchor-hover-color: #4f3674;
+  --anchor-hover-background-color: #d6a800;
+  --card-background-color: #fff;
+  --card-title-color: #4f3674;
+  --btn-background-color: #4f3674;
+  --btn-color: #fff;
+  --btn-hover-background-color: #d6a800;
+  --btn-hover-color: #4f3674;
+  --input-border-color: #ccc;
+  --return-home-color: #4f3674;
+  --return-home-hover: #d6a800;
+  --return-home-visited: #3c275a;
+  --return-home-background-color: #d6a800;
+  --table-header-background-color: #4f3674;
+  --table-header-color: #fff;
+  --table-border-color: #ddd;
+  --table-hover-background-color: #d6a800;
+  --table-hover-color: #4f3674;
+}
+
+body.dark-theme {
+  --text-color: #fafafa;
+  --background-color: #303030;
+  --anchor-color: #fff;
+  --h1-background-color: #9c27b0;
+  --h1-border-color: #9c27b0;
+  --heading-background-color: #424242;
+  --heading-color: #fff;
+  --heading-border-color: #424242;
+  --anchor-hover-color: #d176e1;
+  --anchor-hover-background-color: #303030;
+  --card-background-color: #424242;
+  --card-title-color: #d176e1;
+  --btn-background-color: #d176e1;
+  --btn-color: #fff;
+  --btn-hover-background-color: #7d4787;
+  --btn-hover-color: #fff;
+  --input-border-color: #303030;
+  --return-home-color: #fff;
+  --return-home-hover: #d176e1;
+  --return-home-visited: #fff;
+  --return-home-background-color: #303030;
+  --table-header-background-color: #d176e1;
+  --table-header-color: #fff;
+  --table-border-color: #303030;
+  --table-hover-background-color: #7d4787;
+  --table-hover-color: #fff;
+}
+
+/*styles with the variables*/
+body {
+  font-family: "Oswald", Verdana, Arial, sans-serif;
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+a {
+  color: var(--anchor-color);
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: var(--anchor-hover-background-color);
+  color: var(--anchor-hover-color);
+}
+
+/*moved return-home from site.css to apply the themes*/
+.return-home {
+  color: var(--return-home-color);
+  text-decoration: none;
+}
+
+.return-home:hover {
+  background-color: var(--return-home-background-color);
+  color: var(--return-home-hover);
+}
+
+.return-home:visited {
+  color: var(--return-home-visited);
+}
+
+h1 {
+  color: var(--heading-color);
+  background-color: var(--h1-background-color);
+  padding: 10px;
+  border: 1px solid var(--h1-border-color);
+}
+
+h2,
+h3,
+h4 {
+  color: var(--heading-color);
+  background-color: var(--heading-background-color);
+  padding: 10px;
+  border: 1px solid var(--heading-border-color);
+}
+
+/* Table Styles */
+table {
+  border-collapse: collapse;
+  /* width: 100%; removed to match the final example */
+  margin-bottom: 30px;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: var(--table-header-background-color);
+  color: var(--table-header-color);
+}
+
+table th,
+table td {
+  border: 1px solid var(--table-border-color);
+  padding: 8px;
+  text-align: left;
+}
+
+table-hover,
+tr:hover {
+  background-color: var(--table-hover-background-color);
+  color: var(--table-hover-color);
+  cursor: pointer;
+}
+/* .table tr:hover {
+    background-color: #d6a800;
+    color: #4f3674;
+    cursor: pointer;
+    for the gold hover with your pointer 
+} */

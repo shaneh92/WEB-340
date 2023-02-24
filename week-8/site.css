@@ -1,0 +1,87 @@
+/*
+=================================================================================================================
+; Title: site.css
+; Author: Professor Krasso
+; Modified by: Shane Hingtgen
+; Bellevue University
+; Date: 01/02/23
+; Description: This is the site.css file required by the Web 330 HTML, CSS, and JavaScript Requirements document.
+; Work Cited:
+    Web 330 HTML, CSS, and JavaScript Requirements
+=================================================================================================================
+*/
+.app-header {
+    text-align: center;
+    /* centers the title for the web page*/
+  }
+
+/* moved to theme.css for dark/light theme
+.return-home {
+    color: #4f3674;
+    text-decoration: none;
+    
+}
+
+.return-home:hover {
+    background-color: #D6A800;
+    color: #4f3674;
+
+}
+
+.return-home:visited {
+    color: #3C275A;
+}
+*/
+
+.form {
+    display: inline-grid;
+    grid-template-columns: auto;
+}
+
+.form-field {
+    padding: 20px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+
+/*This is for the entire card container*/
+.assign-container {
+    padding: 10px;
+}
+
+
+/*This is for the card content*/
+.assign-content {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+
+/*This is for the results card.*/
+.assign-results-text {
+    text-align: center;
+    font-size: 28px;
+}
+/*The above content is required from the Web 330 HTML, CSS, and JavaScript requirements document on CSS styles in site.css section.*/
+/* Below is the additional styling requirements for web-330 assign 1*/
+
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#icon-mode:hover {
+    cursor: pointer;
+}
+
+#icon-text {
+    padding-left: 10px;
+}
+
+.pull-right {
+    float: right;
+}
